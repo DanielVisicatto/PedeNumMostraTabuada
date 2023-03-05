@@ -5,6 +5,10 @@ if(!int.TryParse(Console.ReadLine(), out var numb))
 }
 else
 {
+    Verifica1a9();
+}
+void Verifica1a9()
+{
     if (numb < 1 || numb > 9)
     {
         Console.WriteLine("Entre 1 e 9 por favor");
@@ -13,10 +17,11 @@ else
     {
         Console.WriteLine("Você escolheu o {0}.\n\n" +
         "Tome-lhe a tabuada do {0}:\n", numb);
-        for (int i = 1; i <= 10; i++)
-        {
-            Console.WriteLine("{0} X {1} = {2}", numb, i, (numb * i));
-        }
+        ImprimeTabuada();
     }
-    
+}
+void ImprimeTabuada()
+{
+    for (int i = 1; i <= 10; i++)
+        Console.WriteLine("{0} X {1} = {2}", numb, i, (numb * i));
 }
